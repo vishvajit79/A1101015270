@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vishv.a1101015270.OrderActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/nameTextView"
+        />
+
+    <EditText
+        android:id="@+id/nameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/nameTextView"
+        android:hint="Enter Name" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address:"
+        android:layout_below="@id/nameEdit"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/addressTextView"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/addressTextView"
+
+        android:layout_below="@id/nameEdit"
+        android:id="@+id/addressEdit"
+        android:hint="Enter Address"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardTextView"
+        android:layout_below="@id/addressEdit"
+        android:layout_marginLeft="20dp"
+
+        android:text="Credit card number:"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cardTextView"
+        android:layout_below="@id/addressEdit"
+        android:hint="Enter credit card number"
+        android:id="@+id/cardEdit"
+        android:inputType="numberSigned"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardEdit"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Favorite Couisine:"
+        android:id="@+id/favCuiTextView"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/favCuiTextView"
+        android:layout_below="@id/cardEdit"
+        android:hint="Enter your Favorite couisine"
+        android:id="@+id/favCuiEdit"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/favCuiEdit"
+        android:id="@+id/favRestTextView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Favorite restaurant:"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/favCuiEdit"
+        android:layout_toRightOf="@id/favRestTextView"
+        android:hint="Enter your favorite restaurant"
+        android:id="@+id/favRestEdit"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/favRestEdit"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/orderBtn"
+        android:text="Order"/>
+</RelativeLayout>
