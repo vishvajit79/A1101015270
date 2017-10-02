@@ -11,6 +11,9 @@
     <string name="next">Next</string>
     <string name="select_the_type_of_restaurant">Select the type of restaurant</string>
     <string name="a1101015270_food_order">A1101015270 Food Order</string>
+    <string name="credit_card_number">Credit card number:</string>
+    <string name="address">Address:</string>
+    <string name="enter_address">Enter Address</string>
     <string-array name="american_restaurant_list">
         <item>American Restaurant 1</item>
         <item>American Restaurant 2</item>
