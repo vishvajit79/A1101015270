@@ -14,65 +14,10 @@
     <string name="credit_card_number">Credit card number:</string>
     <string name="address">Address:</string>
     <string name="enter_address">Enter Address</string>
-    <string-array name="american_restaurant_list">
-        <item>American Restaurant 1</item>
-        <item>American Restaurant 2</item>
-        <item>American Restaurant 3</item>
-    </string-array>
-    <string-array name="chinese_restaurant_list">
-        <item>Chinese Restaurant 1</item>
-        <item>Chinese Restaurant 2</item>
-        <item>Chinese Restaurant 3</item>
-    </string-array>
-    <string-array name="indian_restaurant_list">
-        <item>Indian Restaurant 1</item>
-        <item>Indian Restaurant 2</item>
-        <item>Indian Restaurant 3</item>
-    </string-array>
-    <string-array name="international_restaurant_list">
-        <item>International Restaurant 1</item>
-        <item>International Restaurant 2</item>
-        <item>International Restaurant 3</item>
-    </string-array>
-    <string-array name="italian_restaurant_list">
-        <item>Italian Restaurant 1</item>
-        <item>Italian Restaurant 2</item>
-        <item>Italian Restaurant 3</item>
-    </string-array>
-    <string-array name="american_restaurant_1">
-        <item>American 1 Food Item 1</item>
-        <item>American 1 Food Item 2</item>
-        <item>American 1 Food Item 3</item>
-        <item>American 1 Food Item 4</item>
-    </string-array>
-    <string-array name="american_restaurant_2">
-        <item>American 2 Food Item 1</item>
-        <item>American 2 Food Item 2</item>
-        <item>American 2 Food Item 3</item>
-        <item>American 2 Food Item 4</item>
-    </string-array>
-    <string-array name="american_restaurant_3">
-        <item>American 3 Food Item 1</item>
-        <item>American 3 Food Item 2</item>
-        <item>American 3 Food Item 3</item>
-        <item>American 3 Food Item 4</item>
-    </string-array>
-    <string-array name="italian_restaurant_1">
-        <item>Italian 1 Food Item 1</item>
-        <item>Italian 1 Food Item 2</item>
-        <item>Italian 1 Food Item 3</item>
-        <item>Italian 1 Food Item 4</item>
-    </string-array>
-    <string-array name="italian_restaurant_2">
-        <item>Italian 2 Food Item 2</item>
-        <item>Italian 2 Food Item 2</item>
-        <item>Italian 2 Food Item 3</item>
-        <item>Italian 2 Food Item 4</item>
-    </string-array>
-    <string-array name="italian_restaurant_3">
-        <item>Italian 3 Food Item 3</item>
-        <item>Italian 3 Food Item 2</item>
-        <item>Italian 3 Food Item 3</item>
-        <item>Italian 3 Food Item 4</item>
-    </string-array>
+    <string name="favorite_cuisine">Favorite Cuisine:</string>
+    <string name="favorite_restaurant">Favorite restaurant:</string>
+    <string name="name">Name:</string>
+    <string name="order">Order</string>
+    <string name="special_request">Special Request:</string>
+    <string name="exit">Exit</string>
 </resources>
