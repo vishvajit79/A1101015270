@@ -18,73 +18,29 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/favorite_restaurant"
-        android:textSize="20sp"
-        tools:ignore="RtlHardcoded"
-        android:layout_above="@+id/favRestTextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="11dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name"
-        android:id="@+id/nameTextView"
-        android:textSize="20sp"
-        tools:ignore="RtlHardcoded"
-        android:layout_above="@+id/addressTextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="14dp" />
-
     <EditText
         android:id="@+id/nameEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/addressEdit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Name"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        tools:ignore="RtlHardcoded"
-        android:layout_alignBottom="@+id/nameTextView"
-        android:layout_toRightOf="@+id/nameTextView"
-        android:layout_toEndOf="@+id/nameTextView"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/address"
-        android:textSize="20sp"
-        android:id="@+id/addressTextView"
-        tools:ignore="RtlHardcoded"
-        android:layout_above="@+id/addressEdit"
-        android:layout_alignLeft="@+id/cardTextView"
-        android:layout_alignStart="@+id/cardTextView" />
+        tools:ignore="RtlHardcoded" />
 
     <EditText
         android:id="@+id/addressEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:textSize="20sp"
-        tools:ignore="RtlHardcoded"
         android:layout_above="@+id/cardEdit"
         android:layout_alignLeft="@+id/cardTextView"
-        android:layout_alignStart="@+id/cardTextView" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cardTextView"
+        android:layout_alignStart="@+id/cardTextView"
+        android:hint="Address"
+        android:inputType="textPostalAddress"
         android:textSize="20sp"
-        android:text="@string/credit_card_number"
-        tools:ignore="RtlHardcoded"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/favCuiTextView"
-        android:layout_alignStart="@+id/favCuiTextView" />
+        tools:ignore="RtlHardcoded" />
 
     <EditText
         android:id="@+id/cardEdit"
@@ -95,57 +51,36 @@
         android:layout_centerVertical="true"
         android:layout_toEndOf="@+id/cardTextView"
         android:layout_toRightOf="@+id/cardTextView"
+        android:hint="Card Number"
         android:inputType="number"
         android:textSize="20sp"
         tools:ignore="RtlHardcoded" />
 
 
-    <TextView
-        android:id="@+id/favCuiTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="@string/favorite_cuisine"
-        android:layout_above="@+id/favRestEdit"
-        android:layout_alignRight="@+id/favRestTextView"
-        android:layout_alignEnd="@+id/favRestTextView" />
-
     <EditText
         android:id="@+id/favCuiEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        tools:ignore="RtlHardcoded"
-        android:inputType=""
-        android:layout_alignBaseline="@+id/favCuiTextView"
-        android:layout_alignBottom="@+id/favCuiTextView"
-        android:layout_toRightOf="@+id/favCuiTextView"
-        android:layout_toEndOf="@+id/favCuiTextView"
-        android:layout_marginLeft="14dp"
-        android:layout_marginStart="14dp" />
-
-    <TextView
-        android:id="@+id/favRestTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/special_request"
-        android:textSize="20sp"
-        tools:ignore="RtlHardcoded"
-        android:layout_above="@+id/specialRequestEdit"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cardEdit"
+        android:layout_marginTop="22dp"
+        android:hint="Favorite Cuisine"
+        android:inputType=""
+        android:textSize="20sp"
+        tools:ignore="RtlHardcoded" />
 
     <EditText
         android:id="@+id/favRestEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/favCuiEdit"
+        android:hint="Favorite Restaurant"
         android:inputType=""
         android:textSize="20sp"
-        tools:ignore="RtlHardcoded"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_toRightOf="@+id/textView4"
-        android:layout_toEndOf="@+id/textView4" />
+        tools:ignore="RtlHardcoded" />
 
     <Button
         android:id="@+id/orderBtn"
@@ -163,12 +98,12 @@
         android:id="@+id/specialRequestEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textMultiLine|textLongMessage"
-        android:textSize="20sp"
-        android:layout_above="@+id/orderBtn"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="34dp" />
+        android:layout_below="@+id/favRestEdit"
+        android:ems="10"
+        android:hint="Special Request"
+        android:inputType="textMultiLine|textLongMessage"
+        android:textSize="20sp" />
 
 </RelativeLayout>
