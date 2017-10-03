@@ -86,17 +86,17 @@
         android:layout_alignStart="@+id/favCuiTextView" />
 
     <EditText
+        android:id="@+id/cardEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:id="@+id/cardEdit"
-        android:inputType="numberSigned"
-        tools:ignore="RtlHardcoded"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/cardTextView"
         android:layout_toRightOf="@+id/cardTextView"
-        android:layout_toEndOf="@+id/cardTextView" />
+        android:inputType="number"
+        android:textSize="20sp"
+        tools:ignore="RtlHardcoded" />
 
 
     <TextView

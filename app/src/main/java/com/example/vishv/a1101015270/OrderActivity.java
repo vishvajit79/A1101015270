@@ -55,15 +55,15 @@ public class OrderActivity extends Activity {
     }
 
     private boolean validateTextEdits() {
-        if (nameEdit.getText().length() <= 0) {
+        if (nameEdit.getText().length() <= 0 || nameEdit == null || nameEdit.getText().toString().isEmpty()) {
             nameEdit.setError("Enter your name");
             return false;
         }
-        if (addressEdit.getText().length() <= 0) {
+        if (addressEdit.getText().length() <= 0|| addressEdit == null || addressEdit.getText().toString().isEmpty()) {
             addressEdit.setError("Enter your address");
             return false;
         }
-        if (cardNumberEdit.getText().length() != 16) {
+        if (cardNumberEdit.getText().length() != 16|| addressEdit == null || addressEdit.getText().toString().isEmpty()) {
             cardNumberEdit.setError("Enter your credit card number and it should be 16 digit ");
             return false;
         }

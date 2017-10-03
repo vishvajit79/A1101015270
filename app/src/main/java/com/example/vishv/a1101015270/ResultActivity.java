@@ -1,6 +1,7 @@
 package com.example.vishv.a1101015270;
 
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,36 +21,36 @@ public class ResultActivity extends Activity {
         StringBuilder builder = new StringBuilder();
         builder.append("Name - ");
         builder.append(getIntent().getStringExtra("name"));
-        builder.append("\n");
+        builder.append("\n\n");
         builder.append("Address - ");
         builder.append(getIntent().getStringExtra("address"));
-        builder.append("\n");
+        builder.append("\n\n");
         builder.append("Card Number - ");
         builder.append(getIntent().getStringExtra("card"));
-        builder.append("\n");
+        builder.append("\n\n");
         builder.append("Cuisine - ");
         builder.append(getIntent().getStringExtra("selectedCuisine"));
-        builder.append("\n");
+        builder.append("\n\n");
         builder.append("Restaurant - ");
         builder.append(getIntent().getStringExtra("selectedRestaurant"));
-        builder.append("\n");
-        builder.append("Food Items  - ");
+        builder.append("\n\n");
+        builder.append("Food Items  - \n");
         builder.append(getIntent().getStringExtra("selectedFood"));
-        builder.append("\n");
-        if(getIntent().getStringExtra("favCuisine") != ""){
+        builder.append("\n\n\n");
+        if(!getIntent().getStringExtra("favCuisine").isEmpty() || getIntent().getStringExtra("favCuisine") != null){
             builder.append("Favorite Cuisine - ");
             builder.append(getIntent().getStringExtra("favCuisine"));
-            builder.append("\n");
+            builder.append("\n\n");
         }
-        if(getIntent().getStringExtra("favRestaurant") != ""){
+        if(!getIntent().getStringExtra("favRestaurant").isEmpty() || getIntent().getStringExtra("favRestaurant") != null){
             builder.append("Favorite Restaurant - ");
             builder.append(getIntent().getStringExtra("favRestaurant"));
-            builder.append("\n");
+            builder.append("\n\n");
         }
-        if(getIntent().getStringExtra("specialRequest") != ""){
+        if(!getIntent().getStringExtra("specialRequest").isEmpty() || getIntent().getStringExtra("specialRequest") != null){
             builder.append("Special Request - ");
             builder.append(getIntent().getStringExtra("specialRequest"));
-            builder.append("\n");
+            builder.append("\n\n");
         }
         textView.setText(builder.toString());
 
@@ -58,8 +59,9 @@ public class ResultActivity extends Activity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                android.os.Process.killProcess(android.os.Process.myPid());
-                System.exit(1);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    finishAffinity();
+                }
             }
         });
     }
