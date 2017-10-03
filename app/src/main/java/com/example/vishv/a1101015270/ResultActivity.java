@@ -12,6 +12,11 @@ public class ResultActivity extends Activity {
     private Button button;
     private TextView textView;
 
+    public static boolean isEmptyString(String text) {
+        return (text == null || text.trim().equals("null") || text.trim()
+                .length() <= 0);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,17 +42,17 @@ public class ResultActivity extends Activity {
         builder.append("Food Items  - \n");
         builder.append(getIntent().getStringExtra("selectedFood"));
         builder.append("\n\n\n");
-        if(!getIntent().getStringExtra("favCuisine").isEmpty() || getIntent().getStringExtra("favCuisine") != null){
+        if(!isEmptyString(getIntent().getStringExtra("favCuisine"))){
             builder.append("Favorite Cuisine - ");
             builder.append(getIntent().getStringExtra("favCuisine"));
             builder.append("\n\n");
         }
-        if(!getIntent().getStringExtra("favRestaurant").isEmpty() || getIntent().getStringExtra("favRestaurant") != null){
+        if(!isEmptyString(getIntent().getStringExtra("favRestaurant"))){
             builder.append("Favorite Restaurant - ");
             builder.append(getIntent().getStringExtra("favRestaurant"));
             builder.append("\n\n");
         }
-        if(!getIntent().getStringExtra("specialRequest").isEmpty() || getIntent().getStringExtra("specialRequest") != null){
+        if(!isEmptyString(getIntent().getStringExtra("specialRequest"))){
             builder.append("Special Request - ");
             builder.append(getIntent().getStringExtra("specialRequest"));
             builder.append("\n\n");

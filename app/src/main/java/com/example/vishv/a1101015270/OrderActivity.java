@@ -55,19 +55,24 @@ public class OrderActivity extends Activity {
     }
 
     private boolean validateTextEdits() {
-        if (nameEdit.getText().length() <= 0 || nameEdit == null || nameEdit.getText().toString().isEmpty()) {
+        if (isEmptyString(nameEdit.getText().toString())) {
             nameEdit.setError("Enter your name");
             return false;
         }
-        if (addressEdit.getText().length() <= 0|| addressEdit == null || addressEdit.getText().toString().isEmpty()) {
+        if (isEmptyString(addressEdit.getText().toString())) {
             addressEdit.setError("Enter your address");
             return false;
         }
-        if (cardNumberEdit.getText().length() != 16|| addressEdit == null || addressEdit.getText().toString().isEmpty()) {
+        if (isEmptyString(cardNumberEdit.getText().toString())) {
             cardNumberEdit.setError("Enter your credit card number and it should be 16 digit ");
             return false;
         }
         return true;
+    }
+
+    public static boolean isEmptyString(String text) {
+        return (text == null || text.trim().equals("null") || text.trim()
+                .length() <= 0);
     }
 }
 

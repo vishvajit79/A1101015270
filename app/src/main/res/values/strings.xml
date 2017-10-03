@@ -20,4 +20,5 @@
     <string name="order">Order</string>
     <string name="special_request">Special Request:</string>
     <string name="exit">Exit</string>
+    <string name="order_receipt">Order Receipt</string>
 </resources>
