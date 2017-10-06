@@ -21,4 +21,6 @@
     <string name="special_request">Special Request:</string>
     <string name="exit">Exit</string>
     <string name="order_receipt">Order Receipt</string>
+    <string name="please_enter_your_information">Please enter your information</string>
+    <string name="card_number">Card Number</string>
 </resources>

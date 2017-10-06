@@ -2,14 +2,10 @@ package com.example.vishv.a1101015270;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.MediaCodec;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
-import java.util.regex.Pattern;
 
 public class OrderActivity extends Activity {
 
@@ -19,8 +15,6 @@ public class OrderActivity extends Activity {
     private EditText favoriteCuisineEdit;
     private EditText favoriteRestaurantEdit;
     private EditText specialRequestEdit;
-    private Button orderButton;
-    final Pattern pattern = Pattern.compile("^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\\d{3})\\d{11})$");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +26,7 @@ public class OrderActivity extends Activity {
         favoriteCuisineEdit = (EditText) findViewById(R.id.favCuiEdit);
         favoriteRestaurantEdit = (EditText) findViewById(R.id.favRestEdit);
         specialRequestEdit = (EditText) findViewById(R.id.specialRequestEdit);
-        orderButton = (Button) findViewById(R.id.orderBtn);
+        Button orderButton = (Button) findViewById(R.id.orderBtn);
 
         orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +57,7 @@ public class OrderActivity extends Activity {
             addressEdit.setError("Enter your address");
             return false;
         }
-        if (isEmptyString(cardNumberEdit.getText().toString())) {
+        if (cardNumberEdit.length() != 16 ) {
             cardNumberEdit.setError("Enter your credit card number and it should be 16 digit ");
             return false;
         }
