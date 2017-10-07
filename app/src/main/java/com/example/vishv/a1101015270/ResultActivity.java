@@ -3,6 +3,7 @@ package com.example.vishv.a1101015270;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -23,6 +24,7 @@ public class ResultActivity extends Activity {
         setContentView(R.layout.activity_result);
 
         textView = (TextView) findViewById(R.id.outputOrder);
+        textView.setMovementMethod(new ScrollingMovementMethod());
         StringBuilder builder = new StringBuilder();
         builder.append("Name - ");
         builder.append(getIntent().getStringExtra("name"));
